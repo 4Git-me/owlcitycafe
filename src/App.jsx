@@ -15,7 +15,8 @@ import FoodpandaButton from './components/fp'
 
 export default function App() {
   return (
-    <Router>
+       <Router basename="/owlcitycafe">
+
       <ScrollToTop />
       
       <Navbar />
