@@ -19,6 +19,42 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+
+
+
+// Inside your Navbar component
+
+const renderNavItem = (item, variant = 'desktop') => {
+  const isActive = location.pathname === item.href;
+  const isContact = item.name === 'Contact Us';
+
+  const baseClass =
+    variant === 'desktop'
+      ? isContact
+        ? 'btn rounded-md bg-[#00303F] px-6 py-2 text-white text-sm font-medium hover:bg-orange-600'
+        : `text-md font-medium ${isActive ? 'text-orange-600' : 'text-gray-900'} hover:text-orange-500`
+      : isContact
+      ? 'btn block text-lg font-medium text-white bg-[#00303F] px-6 py-3 rounded-md hover:bg-amber-600'
+      : 'block text-lg font-medium text-gray-900 hover:text-amber-600';
+
+  return (
+    <Link
+      key={item.name}
+      to={item.href}
+      className={`${baseClass} transition`}
+      onClick={variant === 'mobile' ? () => setMobileMenuOpen(false) : undefined}
+    >
+      {item.name}
+    </Link>
+  );
+};
+
+
+
+
+
+
+
   return (
     <header className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
       <nav
@@ -31,32 +67,30 @@ export default function Navbar() {
           </Link>
         </div>
 
-      {/* Desktop nav */}
+{/* Desktop nav */}
+{/* <div className="hidden lg:flex lg:items-center lg:gap-x-8 ">
+  {navigation.map((item) => (
+    <Link
+      key={item.name}
+      to={item.href}
+      className={`${
+        item.name === 'Contact Us'
+          ? "btn rounded-md bg-[#00303F] px-6 py-2 text-white text-sm font-medium hover:bg-orange-600"
+          : `text-md font-medium ${
+              location.pathname === item.href
+                ? "text-orange-600"
+                : "text-gray-900"
+            } hover:text-orange-500`
+      } transition`}
+    >
+      {item.name}
+    </Link>
+  ))}
+</div> */}
 <div className="hidden lg:flex lg:items-center lg:gap-x-8 ">
-  {navigation.map((item) =>
-    item.name === 'Contact Us' ? (
-      <a
-        key={item.name}
-        href={item.href}
-        className="btn rounded-md bg-[#00303F] px-6 py-2 text-white text-sm font-medium hover:bg-orange-600  transition"
-      >
-        {item.name}
-      </a>
-    ) : (
-      <Link
-        key={item.name}
-        to={item.href}
-        className={`text-md font-medium ${
-          location.pathname === item.href
-            ? "text-orange-600"
-            : "text-gray-900"
-        } hover:text-orange-500 transition`}
-      >
-        {item.name}
-      </Link>
-    )
-  )}
+  {navigation.map((item) => renderNavItem(item, 'desktop'))}
 </div>
+
 
 
         {/* Mobile menu toggle */}
@@ -91,17 +125,21 @@ export default function Navbar() {
             </button>
           </div>
           <div className="mt-6 space-y-4">
+  {navigation.map((item) => renderNavItem(item, 'mobile'))}
+</div>
+
+          {/* <div className="mt-6 space-y-4">
             {navigation.map((item) => (
               item.name === 'Contact Us' ? (
                 // Render the "Contact Us" button in the mobile menu as well
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="btn block text-lg font-medium text-white bg-[#00303F] px-6 py-3 rounded-md hover:bg-amber-600 transition"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ) : (
                 // Regular links for other items in mobile menu
                 <Link
@@ -114,7 +152,7 @@ export default function Navbar() {
                 </Link>
               )
             ))}
-          </div>
+          </div> */}
         </div>
       )}
     </header>

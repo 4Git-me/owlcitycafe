@@ -1,6 +1,7 @@
 // Contact.jsx
 import React from 'react';
 import { useState } from 'react';
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,7 +27,14 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-white py-12 mt-10" id="contact">
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+    <section className="bg-white py-12 mt-10">
+     
+                      
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-amber-600 mb-8">
           Get In Touch
@@ -109,5 +117,6 @@ export default function Contact() {
         </form>
       </div>
     </section>
+    </motion.div>
   );
 }
