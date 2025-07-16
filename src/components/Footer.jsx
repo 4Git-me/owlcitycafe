@@ -58,7 +58,7 @@ export default function Footer() {
 
       {/* Bottom - Copyright */}
       <div className="mt-8 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} Gensparks Digital. All rights reserved
+        © {new Date().getFullYear()} GenSpark Digital All rights reserved
       </div>
     </footer>
   );
