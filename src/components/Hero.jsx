@@ -11,7 +11,7 @@ import { FaClock, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
                 <img 
                     src={herocover} 
                     alt="Chill Brew Café Interior"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover "
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
             </div>
@@ -28,7 +28,7 @@ import { FaClock, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
                         <span className="block text-amber-200 font-light italic">Owl City Café</span>
                     </h1>
                     
-                    <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-xl md:text-2xl mb-8 font-normal leading-relaxed max-w-2xl mx-auto">
                         Where Night Owls and Early Birds Meet
                     </p>
 

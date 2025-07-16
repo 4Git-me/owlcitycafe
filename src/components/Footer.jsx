@@ -43,11 +43,11 @@ export default function Footer() {
         <div className="space-y-2 text-sm">
           <div className="flex items-center justify-center md:justify-start gap-2">
             <FaPhoneAlt className="text-orange-400" />
-            <span>8123-4867</span>
+            <span>0123-4567</span>
           </div>
           <div className="flex items-center justify-center md:justify-start gap-2">
             <FaPhoneAlt className="text-orange-400" />
-            <span>+63 929 323 43 43</span>
+            <span>+63 912 345 6789</span>
           </div>
           <div className="flex items-center justify-center md:justify-start gap-2">
             <MdEmail className="text-orange-400" />

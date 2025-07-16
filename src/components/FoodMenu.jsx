@@ -43,15 +43,6 @@ import noodles6 from '../assets/images/Cafe/Noodles/whitenoodle.jpg';
 
 
 
-// Helper function to create mock items (no longer used for Noodles)
-// const createItems = (baseName, tag, min, max) =>
-//   Array.from({ length: 6 }, (_, i) => ({
-//     name: `${baseName} ${i + 1}`,
-//     image: `https://source.unsplash.com/400x300/?${tag},${i}`,
-//     price: Math.floor(Math.random() * (max - min + 1)) + min,
-//     category: baseName,
-//   }));
-
 
 // Data with imported images
 const allMenuItems = {
