@@ -27,7 +27,13 @@ export default function Footer() {
         <div className="space-y-4">
           <p className="font-medium">Follow Us</p>
           <div className="flex justify-center md:justify-start gap-4 text-xl">
-            <a href="https://web.facebook.com/profile.php?id=61578675141349" aria-label="Facebook" className="hover:text-amber-400">
+            <a
+              href="https://web.facebook.com/profile.php?id=61578675141349"
+              aria-label="Facebook"
+              className="hover:text-amber-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </a>
             <a href="#" aria-label="Instagram" className="hover:text-amber-400">

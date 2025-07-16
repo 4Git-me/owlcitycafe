@@ -4,6 +4,7 @@ import { FiCoffee } from 'react-icons/fi';
 import { GiNoodles, GiFullPizza, GiFrenchFries, GiIceCube } from 'react-icons/gi';
 import { MdFreeBreakfast } from 'react-icons/md';
 
+
 //Import food Menu images
 //Coffee Images
 import americano from '../assets/images/Cafe/coffee/americano.png';
@@ -42,7 +43,7 @@ import noodles5 from '../assets/images/Cafe/Noodles/spicyegg.jpg';
 import noodles6 from '../assets/images/Cafe/Noodles/whitenoodle.jpg';
 
 
-
+// Lazy load the FoodMenu component
 
 // Data with imported images
 const allMenuItems = {
@@ -155,6 +156,7 @@ export default function FoodMenu() {
         {/* Mobile: Horizontal Scroll */}
         <div className="sm:hidden overflow-x-auto space-x-4 flex pb-4 -mx-2 px-2">
           {filteredItems.map((item, idx) => (
+           
             <div
               key={idx}
               className="min-w-[250px] bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105"
@@ -162,6 +164,7 @@ export default function FoodMenu() {
               <img
                 src={item.image}
                 alt={item.name}
+                loading="lazy"
                 className="w-full h-40 object-fill"
               />
               <div className="px-4 py-3">
@@ -171,19 +174,23 @@ export default function FoodMenu() {
                 <p className="text-sm text-gray-600 mt-1">₱{item.price}.00</p>
               </div>
             </div>
+         
           ))}
         </div>
 
         {/* Desktop: Grid Layout */}
         <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        
           {filteredItems.map((item, idx) => (
-            <div
+           
+           <div
               key={idx}
               className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105"
             >
               <img
                 src={item.image}
                 alt={item.name}
+                 loading="lazy"
                 className="w-full h-48 object-cover"
               />
               <div className="px-4 py-3">
@@ -194,6 +201,7 @@ export default function FoodMenu() {
               </div>
             </div>
           ))}
+         
         </div>
       </motion.div>
       {/* Empty State */}
