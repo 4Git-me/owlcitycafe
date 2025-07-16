@@ -169,7 +169,7 @@ export default function FoodMenu() {
               <img
                 src={item.image}
                 alt={item.name}
-                loading="lazy"
+               
                 className="w-full h-40 object-fill"
               />
               <div className="px-4 py-3">
@@ -195,7 +195,7 @@ export default function FoodMenu() {
               <img
                 src={item.image}
                 alt={item.name}
-                 loading="lazy"
+                
                 className="w-full h-48 object-cover"
               />
               <div className="px-4 py-3">
