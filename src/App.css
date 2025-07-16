@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important; 
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b4580c !important; 
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #093623 !important;
+  
+  border-radius: 50%;
+  opacity: 1;
+}
