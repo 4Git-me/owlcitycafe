@@ -27,7 +27,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/foodmenu" element={<FoodMenu/>} />
             <Route path="/reviews" element={<Reviews />} />
-            <Route path="/contactus" element={<Contact/>} />
+            <Route path="/contact" element={<Contact/>} />
           </Routes>
         </div>
         <FoodpandaButton />

@@ -2,7 +2,7 @@
 import About from "./About";
 import FoodMenu from "./FoodMenu";
 import Reviews from "./Reviews";
-import ContactUs from "./Contact";
+import Contact from "./Contact";
 
 
 
@@ -29,7 +29,7 @@ export default function Home() {
       </section>
 
       <section id="contact">
-        <ContactUs />
+        <Contact />
       </section>
 
         
