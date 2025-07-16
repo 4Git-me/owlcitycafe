@@ -67,26 +67,6 @@ const renderNavItem = (item, variant = 'desktop') => {
           </Link>
         </div>
 
-{/* Desktop nav */}
-{/* <div className="hidden lg:flex lg:items-center lg:gap-x-8 ">
-  {navigation.map((item) => (
-    <Link
-      key={item.name}
-      to={item.href}
-      className={`${
-        item.name === 'Contact Us'
-          ? "btn rounded-md bg-[#00303F] px-6 py-2 text-white text-sm font-medium hover:bg-orange-600"
-          : `text-md font-medium ${
-              location.pathname === item.href
-                ? "text-orange-600"
-                : "text-gray-900"
-            } hover:text-orange-500`
-      } transition`}
-    >
-      {item.name}
-    </Link>
-  ))}
-</div> */}
 <div className="hidden lg:flex lg:items-center lg:gap-x-8 ">
   {navigation.map((item) => renderNavItem(item, 'desktop'))}
 </div>
@@ -128,31 +108,7 @@ const renderNavItem = (item, variant = 'desktop') => {
   {navigation.map((item) => renderNavItem(item, 'mobile'))}
 </div>
 
-          {/* <div className="mt-6 space-y-4">
-            {navigation.map((item) => (
-              item.name === 'Contact Us' ? (
-                // Render the "Contact Us" button in the mobile menu as well
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="btn block text-lg font-medium text-white bg-[#00303F] px-6 py-3 rounded-md hover:bg-amber-600 transition"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                // Regular links for other items in mobile menu
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block text-lg font-medium text-gray-900 hover:text-amber-600 transition"
-                >
-                  {item.name}
-                </Link>
-              )
-            ))}
-          </div> */}
+     
         </div>
       )}
     </header>
