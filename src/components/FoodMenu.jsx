@@ -29,7 +29,6 @@ const allMenuItems = {
       name: 'Cappuccino',
       image: 'https://images.unsplash.com/photo-1693645758592-207a36b28896?w=500&auto=format&fit=crop&q=60',
       price: 150,
-      price: 140,
     },
     {
       
