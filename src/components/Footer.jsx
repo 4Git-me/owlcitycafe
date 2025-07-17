@@ -5,6 +5,7 @@ import {
   FaPhoneAlt,
 } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import { Link} from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -12,15 +13,15 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         {/* Left - Navigation */}
         <div className="space-y-2">
-          <a href="/about" className="text-sm hover:text-orange-400 block">
+          <Link to="/about" className="text-sm hover:text-orange-400 block">
             About Us
-          </a>
-          <a href="/foodmenu" className="text-sm hover:text-orange-400 block">
+          </Link>
+          <Link to="/foodmenu" className="text-sm hover:text-orange-400 block">
             Menu
-          </a>
-          <a href="/reviews" className="text-sm hover:text-orange-400 block">
+          </Link>
+          <Link to="/reviews" className="text-sm hover:text-orange-400 block">
             Reviews
-          </a>
+          </Link>
         </div>
 
         {/* Center - Social */}
