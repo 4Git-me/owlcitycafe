@@ -3,95 +3,159 @@ import { motion } from "framer-motion";
 import { FiCoffee } from 'react-icons/fi';
 import { GiNoodles, GiFullPizza, GiFrenchFries, GiIceCube } from 'react-icons/gi';
 import { MdFreeBreakfast } from 'react-icons/md';
-
-
-//Import food Menu images
-//Coffee Images
-// ☕ Coffee Images
-import americano from '../assets/images/Cafe/coffee-webp/americano.webp';
-import latte from '../assets/images/Cafe/coffee-webp/latte.webp';
-import Flatwhite from '../assets/images/Cafe/coffee-webp/Flatwhite.webp';
-import mocha from '../assets/images/Cafe/coffee-webp/mocha.webp';
-import cappuccino from '../assets/images/Cafe/coffee-webp/cappuccino.webp';
-import vanilla from '../assets/images/Cafe/coffee-webp/vanilla.webp';
-
-// 🧊 Cold Drinks Images
-import crumble from '../assets/images/Cafe/coldrinks-webp/crumbleFantasy.webp';
-import eclipse from '../assets/images/Cafe/coldrinks-webp/EclipseDelight.webp';
-import midnight from '../assets/images/Cafe/coldrinks-webp/MidnightCocoa.webp';
-import Oreo from '../assets/images/Cafe/coldrinks-webp/OreoTwilight.webp';
-import crumbleFantasy from '../assets/images/Cafe/coldrinks-webp/SilkenChocolate.webp';
-import velvit from '../assets/images/Cafe/coldrinks-webp/VelvetBliss.webp';
-
-// 🍟 Fries Images
-import fries1 from '../assets/images/Cafe/Fries-webp/regular.webp';
-import fries2 from '../assets/images/Cafe/Fries-webp/friesnugget.webp';
-import fries3 from '../assets/images/Cafe/Fries-webp/winkfries.webp';
-
-// 🍕 Pizza Images
-import pizza1 from '../assets/images/Cafe/Pizza-webp/margherita.webp';
-import pizza2 from '../assets/images/Cafe/Pizza-webp/pepperoni.webp';
-import pizza3 from '../assets/images/Cafe/Pizza-webp/presciutto.webp';
-
-// 🍳 Breakfast Images
-import breakfast1 from '../assets/images/Cafe/Breakfast-webp/eggsandwich.webp';
-import breakfast2 from '../assets/images/Cafe/Breakfast-webp/strawpancake.webp';
-import breakfast3 from '../assets/images/Cafe/Breakfast-webp/omletbacon.webp';
-
-// 🍜 Noodles Images
-import noodles1 from '../assets/images/Cafe/Noodles-webp/ramenegg.webp';
-import noodles2 from '../assets/images/Cafe/Noodles-webp/beffegg.webp';
-import noodles3 from '../assets/images/Cafe/Noodles-webp/regularwegg.webp';
-import noodles4 from '../assets/images/Cafe/Noodles-webp/shrimpegg.webp';
-import noodles5 from '../assets/images/Cafe/Noodles-webp/spicyegg.webp';
-import noodles6 from '../assets/images/Cafe/Noodles-webp/whitenoodle.webp';
-
-
-
-// Lazy load the FoodMenu component
-
-// Data with imported images
 const allMenuItems = {
   'Hot Drinks': [
-    { name: 'Americano', image: americano, price: 100 },
-    { name: 'Latte', image: latte, price: 120 },
-    { name: 'Flat White', image: Flatwhite, price: 130 },
-    { name: 'Mocha', image: mocha, price: 130 },
-    { name: 'Cappuccino', image: cappuccino, price: 140 },
-    { name: 'Vanilla Twilight Latte', image: vanilla, price: 150 },
+    {
+      name: 'Americano',
+      image: 'https://images.unsplash.com/photo-1669872484166-e11b9638b50e?w=500&auto=format&fit=crop&q=60',
+      price: 100,
+    },
+    {
+      name: 'Latte',
+      image: 'https://images.unsplash.com/photo-1632595508805-bd7b9ce74173?w=500&auto=format&fit=crop&q=60',
+      price: 120,
+    },
+    {
+      name: 'Flat White',
+      image: 'https://images.unsplash.com/photo-1710400656915-51cddad11d35?w=500&auto=format&fit=crop&q=60',
+      price: 130,
+    },
+    {
+      name: 'Mocha',
+      image: 'https://images.unsplash.com/photo-1506372023823-741c83b836fe?w=500&auto=format&fit=crop&q=60',
+      price: 130,
+    },
+    {
+      name: 'Cappuccino',
+      image: 'https://images.unsplash.com/photo-1693645758592-207a36b28896?w=500&auto=format&fit=crop&q=60',
+      price: 150,
+      price: 140,
+    },
+    {
+      
+      name: 'Vanilla Twilight Latte',
+      image: 'https://images.unsplash.com/photo-1630040995437-80b01c5dd52d?w=500&auto=format&fit=crop&q=60',
+      price: 150,
+    },
   ],
   'Cold Drinks': [
-    { name: 'Crumble Fantasy', image: crumble, price: 120 },
-    { name: 'Eclipse Delight', image: eclipse, price: 130 },
-    { name: 'Midnight Cocoa', image: midnight, price: 130 },
-    { name: 'Oreo Twilight', image: Oreo, price: 140 },
-    { name: 'Silken Chocolate', image: crumbleFantasy, price: 140 },
-    { name: 'Velvet Bliss', image: velvit, price: 150 },
+    {
+      name: 'Crumble Fantasy',
+      image: 'https://images.unsplash.com/photo-1624781748172-7151704a42b5?w=500&auto=format&fit=crop&q=60',
+      price: 120,
+    },
+    {
+      name: 'Eclipse Delight',
+      image: 'https://images.unsplash.com/photo-1648071597664-ffabc1e1c13b?w=500&auto=format&fit=crop&q=60',
+      price: 130,
+    },
+    {
+      name: 'Midnight Cocoa',
+      image: 'https://images.unsplash.com/photo-1584680744830-465a1dcd78e1?w=500&auto=format&fit=crop&q=60',
+      price: 130,
+    },
+    {
+
+      name: 'Oreo Twilight',
+      image: 'https://images.unsplash.com/photo-1627998691167-4dab0dfcae9f?w=500&auto=format&fit=crop&q=60',
+      price: 140,
+    },
+    {
+      name: 'Silken Chocolate',
+      image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767?w=500&auto=format&fit=crop&q=60',
+      price: 140,
+    },
+    {
+      name: 'Velvet Bliss',
+      image: 'https://images.unsplash.com/photo-1587099417292-221f4fe59679?w=500&auto=format&fit=crop&q=60',
+      price: 150,
+    },
   ],
   Fries: [
-    { name: 'Regular Fries', image: fries1, price: 60 },
-    { name: 'Fries Nugget', image: fries2, price: 80 },
-    { name: 'Wink Fries', image: fries3, price: 90 },
+    {
+      name: 'Regular Fries',
+      image: 'https://images.unsplash.com/photo-1574235059676-1eb6663f8ba6?w=500&auto=format&fit=crop&q=60',
+      price: 60,
+    },
+    {
+      name: 'Spicy Fries',
+      image: 'https://images.unsplash.com/photo-1733907502022-3ec7de6dc86e?w=500&auto=format&fit=crop&q=60',
+      price: 80,
+    },
+    {
+      name: 'Wink Fries',
+      image: 'https://images.unsplash.com/photo-1639744091981-2f826321fae6?w=500&auto=format&fit=crop&q=60',
+      price: 90,
+    },
   ],
   Pizza: [
-    { name: 'Margherita', image: pizza1, price: 200 },
-    { name: 'Pepperoni', image: pizza2, price: 220 },
-    { name: 'Presciutto', image: pizza3, price: 250 },
+    {
+      name: 'Margherita',
+      image: 'https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=500&auto=format&fit=crop&q=60',
+      price: 200,
+    },
+    {
+      name: 'Pepperoni',
+      image: 'https://images.unsplash.com/photo-1670757781705-9b6cb1ad0ca6?w=500&auto=format&fit=crop&q=60',
+      price: 220,
+    },
+    {
+      name: 'Presciutto',
+      image: 'https://images.unsplash.com/photo-1700760934249-93efbb574d23?w=500&auto=format&fit=crop&q=60',
+      price: 250,
+    },
   ],
   'Break Fast': [
-    { name: 'Egg Sandwich', image: breakfast1, price: 120 },
-    { name: 'Strawberry Pancake', image: breakfast2, price: 140 },
-    { name: 'Omelet Bacon', image: breakfast3, price: 150 },
+    {
+      name: 'Egg Sandwich',
+      image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=500&auto=format&fit=crop&q=60',
+      price: 120,
+    },
+    {
+      name: 'Strawberry Pancake',
+      image: 'https://images.unsplash.com/photo-1600326145552-327f74b9c189?w=500&auto=format&fit=crop&q=60',
+      price: 140,
+    },
+    {
+      name: 'Omelet Bacon',
+      image: 'https://images.unsplash.com/photo-1559394473-f5c8303a6d1f?w=500&auto=format&fit=crop&q=60',
+      price: 150,
+    },
   ],
   Noodles: [
-    { name: 'Ramen Egg', image: noodles1, price: 120 },
-    { name: 'Beef Egg', image: noodles2, price: 130 },
-    { name: 'Regular w/ Egg', image: noodles3, price: 110 },
-    { name: 'Shrimp Egg', image: noodles4, price: 140 },
-    { name: 'Spicy Egg', image: noodles5, price: 135 },
-    { name: 'White Noodle', image: noodles6, price: 125 },
+    {
+      name: 'Ramen W/Egg',
+      image: 'https://images.unsplash.com/photo-1731460202531-bf8389d565f7?w=500&auto=format&fit=crop&q=60',
+      price: 120,
+    },
+    {
+      name: 'Beef W/Egg',
+      image: 'https://images.unsplash.com/photo-1735187393519-2989ddc4c32c?w=500&auto=format&fit=crop&q=60',
+      price: 130,
+    },
+    {
+      name: 'Regular w/ Egg',
+      image: 'https://images.unsplash.com/photo-1603033172872-c2525115c7b9?w=500&auto=format&fit=crop&q=60',
+      price: 110,
+    },
+    {
+      name: 'Shrimp W/Egg',
+      image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500&auto=format&fit=crop&q=60',
+      price: 140,
+    },
+    {
+      name: 'Spicy W/Egg',
+      image: 'https://images.unsplash.com/photo-1597933593749-fba737c268c1?w=500&auto=format&fit=crop&q=60',
+      price: 135,
+    },
+    {
+      name: 'White Noodle',
+      image: 'https://images.unsplash.com/photo-1733907557440-e8f8e179cd56?w=500&auto=format&fit=crop&q=60',
+      price: 125,
+    },
   ],
 };
+
 
 const categories = [
   { name: 'Hot Drinks', icon: <FiCoffee size={20} /> },
@@ -117,7 +181,7 @@ export default function FoodMenu() {
     : allMenuItems[selectedCategory];
 
   return (
-    <div className="p-6 max-w-7xl mx-auto font-poppins mt-20">
+    <div className="p-6 max-w-7xl mx-auto font-poppins mt-20 mb-50">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
